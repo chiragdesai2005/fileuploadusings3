@@ -26,12 +26,10 @@ app.use(function (req, res, next) {
     next();
 });
 
-//var config_path = path.join(__dirname, 'auth.json');
-//aws.config.loadFromPath(config_path);
-
+//ask developer to get the AWS key
 aws.config = new aws.Config();
-aws.config.accessKeyId = "AKIAJL454U6I7WLIBXQQ";
-aws.config.secretAccessKey = "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";
+aws.config.accessKeyId = "";
+aws.config.secretAccessKey = "";
 
 // Create an S3 client
 var s3 = new aws.S3();
@@ -80,7 +78,7 @@ app.post('/putFile', function (req, res) {
         }, function (err, data) {
             if (err) throw err;
             console.log("done", data);
-            res.end("OK");
+            res.json('successfully uploaded the file');
         });
     });
     form.parse(req);
