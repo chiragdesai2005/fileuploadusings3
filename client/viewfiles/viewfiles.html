@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="fileUpload">
+<head>
+    <script src="../js/scripts.min.js"></script>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div ng-controller="FileControllerCtrl" class="container">
+        <div class="form-group" ng-init="clearView();">
+            <h3>
+                <center> File Upload Demo </center>
+            </h3>
+        </div>
+        <div ng-init="getAllFiles();">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>SR No.</th>
+                        <th>File Name</th>
+                        <th>Upload Date</th>
+                        <th>Size</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr ng-repeat="data in fileData">
+                        <td>{{$index+1}}</td>
+                        <td>{{data.Key}}</td>
+                        <td>{{data.LastModified}}</td>
+                        <td>{{data.Size}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
