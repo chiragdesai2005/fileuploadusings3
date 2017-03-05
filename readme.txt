@@ -7,14 +7,21 @@ Both will require Node Package Manager to download dependency
 
 Used Technologies
 
+Front end
+
 Webpack
 AngularJS
-NodeJS
-Express js
-AWS S3
 Bootstrap
 CSS
 HTML 5
+
+Middleware
+
+NodeJS
+Express js
+AWS S3
+Mocha Chai for Unit testing
+
 
 --------------------------------
 go to client directory and run command 'npm install' from command prmopt
