@@ -38,3 +38,9 @@ go to server directory and run following commands  from command prmopt
 2 - npm start
 
 This will running a server on localhost 3000 port 
+
+---------------------------------
+
+if you want to run test case
+
+run the command npm test
